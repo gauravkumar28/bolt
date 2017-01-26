@@ -3,6 +3,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from flask import request, json
 import os
+from os import environ
 
 app = Flask(__name__)
 
