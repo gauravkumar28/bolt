@@ -1,4 +1,4 @@
 # bolt
 A chatbot as query resolver 
 
-[Demo](boltgithub.herokuapp.com)
+[Demo](https://boltgithub.herokuapp.com)
