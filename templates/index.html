@@ -16,6 +16,7 @@
       	  if(msg === "")
       	  	return false;
           $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><b>Me:</b>	&nbsp;'+ msg +'</div></div></div></li>');
+           $("#messageText").val("");
           sendMessage(msg);
       });
 
@@ -26,6 +27,7 @@
 	      	  if(msg === "")
 	      	  	return false;
 	          $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><b>Me:</b>	&nbsp;'+ msg +'</div></div></div></li>');
+	           $("#messageText").val("");
 	          sendMessage(msg);
           }
       });
@@ -41,8 +43,7 @@
         	success: function(result){
         		$container = $('.media-list');
             $container[0].scrollTop = $container[0].scrollHeight;
-            $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><b>Bolt:</b>	&nbsp;'+ result +'</div></div></div></li>');
-            $("#messageText").val("");
+            $(".media-list").append('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><b>Bolt:</b>	&nbsp;'+ result["res"] +'</div></div></div></li>');
             $container.animate({ scrollTop: $container[0].scrollHeight }, "slow");
           },
           error: function(err){

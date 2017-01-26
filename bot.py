@@ -37,7 +37,8 @@ def home():
 @app.route("/query", methods = ["PUT","GET"])
 def get_raw_response():
     msg = request.json["msg"]
-    return json.dumps(str(chatbot.get_response(msg)))
+    print(msg)
+    return json.dumps({"res": str(chatbot.get_response(msg))})
 
 
 if __name__ == "__main__":
