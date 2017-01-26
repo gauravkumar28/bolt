@@ -8,16 +8,16 @@ from os import environ
 app = Flask(__name__)
 
 chatbot = ChatBot("Bolt",
-    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
+    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
     logic_adapters=[
         "chatterbot.logic.MathematicalEvaluation",
         "chatterbot.logic.TimeLogicAdapter",
         "chatterbot.logic.BestMatch"
     ],
     database="bolt-chatbot",
+    database_uri='mongodb://localhost:27017/',
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
 )
-
 
 # Train based on the english corpus
 chatbot.train("chatterbot.corpus.english")
