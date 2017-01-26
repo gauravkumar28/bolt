@@ -1,1 +1,0 @@
-{"I am doing well, how about you?": {"created_at": {"$date": 1485449846203}, "extra_data": {}, "in_response_to": [{"text": "Good morning, how are you?", "occurrence": 1}]}, "Good morning, how are you?": {"created_at": {"$date": 1485449846202}, "extra_data": {}, "in_response_to": []}}
