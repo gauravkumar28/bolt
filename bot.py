@@ -7,14 +7,13 @@ from flask import request, json
 app = Flask(__name__)
 
 chatbot = ChatBot("Bolt",
-    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
+    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
     logic_adapters=[
         "chatterbot.logic.MathematicalEvaluation",
         "chatterbot.logic.TimeLogicAdapter",
         "chatterbot.logic.BestMatch"
     ],
     database="bolt-chatbot",
-    database_uri='mongodb://localhost:27017/',
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer'
 )
 
